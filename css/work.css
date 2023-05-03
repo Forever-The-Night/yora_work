@@ -1,0 +1,247 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    color: #7f8c97;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.cd-container {
+    width: 96%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+#cd-timeline {
+    position: relative;
+    padding: 2em 0;
+
+}
+
+#cd-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+    background: #d7e4ed;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.cd-timeline-block {
+    position: relative;
+    margin: 4em 0;
+}
+
+.cd-timeline-block:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cd-timeline-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.cd-timeline-img img {
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+
+.cssanimations .cd-timeline-img.is-hidden {
+    visibility: hidden;
+}
+
+.cssanimations .cd-timeline-img.bounce-in {
+    visibility: visible;
+    animation: cd-bounce-1 0.6s;
+}
+
+@keyframes cd-bounce-1 {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cd-timeline-content {
+    width: 45%;
+    position: relative;
+    margin-left: 0;
+    background: #ffffff;
+    border-radius: 0.25em;
+    padding: 1.6em;
+    box-shadow: 0 3px 0 #d7e4ed;
+}
+
+.cd-timeline-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cd-timeline-content h2 {
+    color: #303e49;
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+
+.cd-timeline-content p,
+.cd-timeline-content .cd-read-more,
+.cd-timeline-content .cd-date {
+    font-size: 13px;
+    font-size: 0.8125rem;
+}
+
+.cd-timeline-content .cd-read-more,
+.cd-timeline-content .cd-date {
+    display: inline-block;
+}
+
+.cd-timeline-content p {
+    margin: 1em 0;
+    line-height: 1.6;
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+.cd-timeline-content .cd-read-more {
+    float: left;
+    padding: .8em 1em;
+    background: #ffbc2c;
+    color: #ffffff;
+    border-radius: 0.25em;
+}
+
+.no-touch .cd-timeline-content .cd-read-more:hover {
+    background-color: #bac4cb;
+}
+
+.cd-timeline-content .cd-date {
+    float: left;
+    padding: .8em 0;
+    opacity: .8;
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 6px;
+    font-size: 16px;
+    font-size: 1rem;
+}
+
+.cd-timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 100%;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid #ffffff;
+    border-color: transparent;
+    border-left-color: #ffffff;
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #ffffff;
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+}
+
+.cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+}
+
+.cssanimations .cd-timeline-content.is-hidden {
+    visibility: hidden;
+}
+
+.cssanimations .cd-timeline-content.bounce-in {
+    visibility: visible;
+    animation: cd-bounce-2 0.6s;
+}
+
+
+@media only screen and (min-width: 1170px) {
+    .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+        animation: cd-bounce-2-inverse 0.6s;
+    }
+}
+
+@keyframes cd-bounce-2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes cd-bounce-2-inverse {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.cd-date img {
+    transition: all 0.3s;
+    opacity: 0;
+}

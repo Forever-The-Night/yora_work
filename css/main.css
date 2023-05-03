@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 100;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 178, 36);
+    background-image: -webkit-linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+    border-radius: 2em;
+}
+::-webkit-scrollbar-track {
+    background-color:#1B1A18;
+    border-radius: 2em;
+}
+@font-face {
+    font-family: 'jijia';
+    src: url('../font/jijia.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+td {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+b {
+    font-weight: 900;
+    color: rgb(255, 187, 60);
+}
+body {
+    cursor: url(../images/mouse.png) 0 0, default;
+    overflow:auto;
+    height: 100vh;
+    background-color: rgb(34, 34, 34);
+}
+.atk{
+    margin: 0 10px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+.atk:hover {
+    opacity: .6;
+}
+.mainh {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+}
+.back {
+    height: 20vh;
+    overflow: hidden;
+    background: url(../images/back.jpg) center center / cover no-repeat rgb(34, 34, 34);
+    transition: all 0.5s;
+}
+.back .head {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back .head .headimg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 3;
+}
+.back .head .logoimg {
+    position: absolute;
+    left: 8%;
+    width: 30%;
+    min-width: 300px;
+    display: block;
+    max-height: 90%;
+    object-fit: cover;
+    z-index: 1;
+}
+#top-img {
+    background: url(https://s1.ax1x.com/2020/09/06/weEVfO.gif);
+    height: 2px;
+    width: 100%;
+    Z-index: 6;
+}
+.footimg {
+    position: fixed;
+}
+.gud {
+    z-index: 5;
+    width: 100vw;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to top, transparent, rgb(22, 22, 22));
+}
+.ingud {
+    user-select:none;
+    font: 18px jijia;
+    font-weight: 100;
+    position: relative;
+    left: 10%;
+    float: left;
+    width: 8%;
+    min-width: 55px;
+    height: 36px;
+    text-align: center;
+    line-height: 34px;
+    color: #fff;
+    transition: all 0.4s;
+}
+.ingud:hover {
+    background: rgba(255,255,255,.1);
+    backdrop-filter: blur(11px);
+    border-color: rgba(255,255,255,.1);
+}
+.rtgud {
+    user-select:none;
+    font: 18px jijia;
+    font-weight: 100;
+    position: relative;
+    right: 10%;
+    float: right;
+    width: 8%;
+    min-width: 130px;
+    height: 36px;
+    text-align: center;
+    line-height: 34px;
+    color: rgb(86, 131, 255);
+    transition: all 0.4s;
+}
+.rtgud:hover {
+    transform: translateX(20px);
+}
+.activegud {
+    color: rgb(255, 187, 60);
+}
+.main {
+    width: 800px;
+    margin: 10px auto;
+    padding: 30px;
+    border-radius: 4px;
+    background-color: #3b3b3be8;
+    z-index: -1;
+    backdrop-filter: blur(3px);
+}
+.kong {
+    height: 20vh;
+}
+.bodymain {
+    height: 80vh;
+}
